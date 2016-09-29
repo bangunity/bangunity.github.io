@@ -86,6 +86,9 @@ body {
 .skill-items{
 	font-size: 2rem;
 }
+.skill-items span{
+	text-decoration: none;
+}
 .works-link{
 	margin-top: 2rem;
 	display: block;

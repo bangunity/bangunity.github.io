@@ -134,6 +134,27 @@ body {
 	background: transparent url(../images/facebook.png) no-repeat center;
 	background-size: 100%;
 }
+.social li.github{
+	background: transparent url(../images/github.png) no-repeat center;
+	background-size: 100%;
+}
+.social li.linkedin{
+	background: transparent url(../images/in.png) no-repeat center;
+	background-size: 100%;
+}
+.social li.instagram{
+	background: transparent url(../images/insta.png) no-repeat center;
+	background-size: 100%;
+}
+.social li.mail{
+	background: transparent url(../images/mail.png) no-repeat center;
+	background-size: 100%;
+}
+.social li.skype{
+	background: transparent url(../images/skype.png) no-repeat center;
+	background-size: 100%;
+}
+
 
 
 

@@ -85,6 +85,7 @@ body {
 }
 .skill-items{
 	font-size: 2rem;
+	line-height: 2.5rem;
 }
 .skill-items span{
 	text-transform: none;

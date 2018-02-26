@@ -1,5 +1,5 @@
 /*
-*@author Vitaliy Ostapenko (CODDOO) 2015
+*@author Vitalii Ostapenko 2015
 *
 */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic-ext,cyrillic);
@@ -211,13 +211,18 @@ background: rgba(49,49,57, 0);
 -moz-transition: background .5s linear;
 transition: background .5s linear;
 }
-.overlay_product a{
+.overlay_product > a{
 display:block;
 position: absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
+}
+.description_product a{
+	color: #ffffff;
+	display: block;
+	line-height: 1.5;
 }
 .name_product{
 font-size: 2em;

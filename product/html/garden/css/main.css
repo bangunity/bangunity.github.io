@@ -1,0 +1,1055 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,cyrillic,cyrillic-ext);
+/**
+*
+*общие стили
+*
+**/
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	padding: 0;
+	margin: 0; 
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+}
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	outline: none;
+} 
+::before, ::after {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	outline: none;
+}
+/**
+*
+* меню
+*
+**/
+nav{
+	width: 100%;
+	height: 70px;
+	background: #ffffff;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	-webkit-box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.33);
+	-moz-box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.33);
+	box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.33);
+	z-index: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+}
+.menu_content{
+	width: 980px;
+	margin: 0 auto;
+	height: 100%;
+	padding: 0 1em;
+}
+.menu_content div{
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+}
+.logo a{
+	display: block;
+	width: 170px;
+	height: 100%;
+	background: transparent url(../images/logo.png) no-repeat center;
+}
+.phone_numbers{
+	float: right;
+	padding: .5em;
+	line-height: 1.3em;
+}
+.operator{
+	margin-left: 1em;
+	color: #989898;
+}
+.phone_numbers a{
+	color: #4D4D4D;
+	text-decoration: none;
+	font-weight: bold;
+}
+.phone_numbers a span{
+	color: #989898;
+	margin-right: .3em;
+}
+.links{
+	padding: 1em;
+}
+.links a{
+	display: inline-block;
+	vertical-align: top;
+	color: #2B73A1;
+	padding: 1em 1.5em;
+}
+.links a.callback_button{
+	background: #E9EDF0 url(../images/callback.png) no-repeat 1em center;
+	padding: 1em 2em 1em 3em;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.links a span{
+	display: inline-block;
+	width: 8px;
+	height: 4px;
+	margin-left: .3em;
+	background: transparent url(../images/arrow.png) no-repeat center;
+}
+/**
+*
+*Ширина контента
+*
+**/
+.content{
+	max-width:980px;
+	margin: 0 auto;
+}
+/**
+*
+* Первый экран
+*
+**/
+.first{
+	width: 100%;
+	min-height: 730px;
+	margin-top: 70px;
+	background-image: url(../images/bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.first::after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -9px;
+	left: 0;
+	right: 0;
+	height: 18px;
+	width: 100%;
+	background: transparent url(../images/border_img.png) repeat-x;
+}
+.title_location{
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	padding:2.6em 1em 0 1em;
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+	color: #4D4D4D;
+	margin: 0 1em;
+	height: 70px;
+	font-size: 18px;
+
+}
+.title_location span{
+	display: block;
+	margin: 0 .5em;
+}
+.title_location span::before, .title_location span::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	border-top: 2px solid #97B7C7;
+	border-top: 2px solid #97B7C7;
+	margin-top: .6em;
+}
+.title_location span::before{
+	margin-left: -102%;
+}
+.title_location span::after{
+	margin-left: 2%;
+}
+h1{
+	font-family: Lora, sans-serif;
+	font-size: 42px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #4D4D4D;
+	line-height: 1.15em;
+	margin-top: .7em;
+}
+h1 span{
+	color: #3FA64C;
+}
+h1 span:last-child{
+	display: block;
+}
+.bottom_title_p{
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+	color: #4D4D4D;
+	font-size: 18px;
+	margin-top: 2em;
+}
+.bottom_title{
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	padding:0 1em;
+	font-family: "Open Sans", sans-serif;
+	color: #4D4D4D;
+	margin: 0 1em;
+	height: 50px;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: normal;
+}
+.bottom_title span{
+	display: block;
+	margin: 0 .5em;
+	padding-top: .5em;
+}
+.bottom_title span::before, .bottom_title span::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	border-top: 2px solid #97B7C7;
+	top: .2em;
+}
+.bottom_title span::before{
+	margin-left: -104%;
+}
+.bottom_title span::after{
+	margin-left: 4%;
+}
+/*форма заказа экскурсий*/
+.excursion_form{
+	width: 100%;
+	padding: 1em;
+	border-radius: 5px;
+	background: rgba(63,166,76, .9);
+}
+.excursion_form p{
+	color:#ffffff;
+	text-align: center;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+.excursion_form div *{
+	display: inline-block;
+	vertical-align: top;
+	width: calc(100% / 3 - .84em);
+	height: 48px;
+	border: none;
+	border-radius: 3px;
+	font-family: "Open Sans", sans-serif;
+
+}
+.excursion_form a{
+	text-decoration: none;
+	color: #4D4D4D;
+	text-align: center;
+	line-height: 45px;
+	background: #FFDF1C;
+}
+.excursion_form a:hover{
+	background: #F2CE00;
+}
+.excursion_form input{
+	margin-right: 1em;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	background: #fff;
+	padding: 0 1.2em;
+	color: #4D4D4D;
+}
+.excursion_form div{
+	margin-top: 1.1em;
+}
+/**
+*
+* блок Особенности
+*
+**/
+.features{
+	width: 100%;
+	padding-bottom: 4em;
+}
+.features_h2{
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	color: #4D4D4D;
+	margin-top: 70px;
+	font-size: 44px;
+}
+.features_h2 h2{
+	display: block;
+	margin: 0 .5em;
+}
+.features_h2 h2::before, .features_h2 h2::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	border-top: 2px solid #CBCBCB;
+	border-top: 2px solid #CBCBCB;
+	margin-top: .6em;
+}
+.features_h2 h2::before{
+	margin-left: -102%;
+}
+.features_h2 h2::after{
+	margin-left: 2%;
+}
+.features ul{
+	display: block;
+	width: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #4D4D4D;
+	margin-top: 2em;
+}
+.features li{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 1.2em;
+	width: calc(100% / 4 - .2em);
+	text-align: center;
+	line-height: 1.3em;
+}
+.features li div{
+	width: 100%;
+	height: 150px;
+}
+.features li:first-child div{
+	background: url(../images/features/time.png) no-repeat center;
+}
+.features li:nth-child(2) div{
+	background: url(../images/features/eco_cottage.png) no-repeat center;
+}
+.features li:nth-child(3) div{
+	background: url(../images/features/acorn.png) no-repeat center;
+}
+.features li:nth-child(4) div{
+	background: url(../images/features/fence.png) no-repeat center;
+}
+.features li:nth-child(5) div{
+	background: url(../images/features/water.png) no-repeat center;
+}
+.features li:nth-child(6) div{
+	background: url(../images/features/tree.png) no-repeat center;
+}
+.features li:nth-child(7) div{
+	background: url(../images/features/payment.png) no-repeat center;
+}
+.features li:nth-child(8) div{
+	background: url(../images/features/sales.png) no-repeat center;
+}
+/**
+*
+* Блок Видео
+*
+*
+*/
+.video{
+	width: 100%;
+	background: url(../images/pattern.png) repeat;
+	position: relative;
+	padding-bottom: 4em;
+}
+.video h2{
+	color: #ffffff;
+	text-align: center;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	padding-top: 70px;
+	font-size: 44px;
+}
+.video::after{
+	 content: "";
+	 position: absolute;
+	 display: block;
+	 bottom: -9px;
+	 left: 0;
+	 right: 0;
+	 height: 18px;
+	 width: 100%;
+	 background: transparent url(../images/border_img.png) repeat-x;
+ }
+.play_video{
+	width: 100%;
+	height: 480px;
+	background: transparent url(../images/video.png) no-repeat center;
+	margin-top: 3em;
+	cursor: pointer;
+}
+/**
+*
+* Почему наши дома энергоэффективные
+*
+**/
+.house_detail{
+	width: 100%;
+}
+.house_detail h2{
+	color: #4D4D4D;
+	text-align: center;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	padding-top: 70px;
+	font-size: 44px;
+}
+.house_detail img{
+	display: block;
+	margin: 3em auto 0;
+	max-width: 980px;
+	width: 100%;
+}
+.house_detail h3{
+	color: #FFB90B;
+	text-align: center;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	padding: 1em 0;
+	font-size: 54px;
+}
+.passport{
+	width: 100%;
+	background: url(../images/pattern.png) repeat;
+	border-bottom: 10px solid #FFDF1C;
+}
+.passport ul{
+	width: 100%;
+	display: block;
+}
+.passport li{
+	display: inline-block;
+	width: calc(100% / 2 - .19em);
+	vertical-align: top;
+	font-family: Lora, sans-serif;
+	font-size: 48px;
+	font-weight: bold;
+	color: #ffffff;
+}
+.passport li:first-child{
+	padding-top: 1em;
+	line-height: 1.1em;
+}
+.passport li a{
+	color: #4D4D4D;
+	text-decoration: none;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	display: block;
+	border-radius: 5px;
+	background: #FFDF1C;
+	height: 48px;
+	line-height: 45px;
+	text-align: center;
+	font-weight: normal;
+	margin-top: 2em;
+	width: 387px;
+}
+.passport li a:hover{
+	background: #F2CE00;
+}
+.passport_img{
+	height: 355px;
+	margin-top: -.4em;
+	background: url(../images/passport.png) no-repeat right center;
+}
+/**
+*
+* блок Инфраструктура
+*
+**/
+.infrastructure{
+	width: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	color: #4D4D4D;
+	min-height: 640px;
+	background-image: url(../images/infrastructure.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.infrastructure h2{
+	color: #4D4D4D;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	padding-top: 70px;
+	font-size: 44px;
+}
+.infrastructure_description{
+	margin: 1em 0;
+	line-height: 1.5em;
+	width: 70%;
+}
+.infrastructure_description span, .how_to_get{
+	font-weight: bold;
+}
+.how_to_get{
+	margin-bottom: .5em;
+}
+.infrastructure a{
+	display: list-item;
+	list-style: inside;
+	color: #2B73A1;
+	margin-bottom: .5em;
+}
+/**
+*
+* блок с Озером
+*
+**/
+.lake{
+	width: 100%;
+	padding-bottom: 4em;
+}
+.lake h2{
+	 color: #4D4D4D;
+	 text-align: center;
+	 font-family: Lora, sans-serif;
+	 font-weight: bold;
+	 padding-top: 70px;
+	 font-size: 36px;
+}
+.lake img{
+	width: 100%;
+	margin-top: 2em;
+}
+/**
+*
+* блок Качество
+*
+**/
+.quality{
+	width: 100%;
+	padding-bottom: 4em;
+	position: relative;
+}
+.quality_h2{
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	color: #4D4D4D;
+	margin-top: 70px;
+	font-size: 44px;
+}
+.quality_h2 h2{
+	display: block;
+	margin: 0 .5em;
+}
+.quality_h2 h2::before, .quality_h2 h2::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	border-top: 2px solid #CBCBCB;
+	border-top: 2px solid #CBCBCB;
+	margin-top: .6em;
+}
+.quality_h2 h2::before{
+	margin-left: -102%;
+}
+.quality_h2 h2::after{
+	margin-left: 2%;
+}
+.quality ul{
+	display: block;
+	width: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #4D4D4D;
+	margin-top: 2em;
+	text-align: center;
+}
+.quality li{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 1.2em;
+	width: calc(100% / 4 - .2em);
+	text-align: center;
+	line-height: 1.3em;
+}
+.quality li div{
+	width: 100%;
+	height: 200px;
+}
+.quality li:first-child div{
+	background: url(../images/quality/brick.png) no-repeat center;
+}
+.quality li:nth-child(2) div{
+	background: url(../images/quality/monolith.png) no-repeat center;
+}
+.quality li:nth-child(3) div{
+	background: url(../images/quality/roof.png) no-repeat center;
+}
+.quality li:nth-child(4) div{
+	background: url(../images/quality/electric.png) no-repeat center;
+}
+.quality li:nth-child(5) div{
+	background: url(../images/quality/glazing.png) no-repeat center;
+}
+.quality li:nth-child(6) div{
+	background: url(../images/quality/water.png) no-repeat center;
+}
+.quality li:nth-child(7) div{
+	background: url(../images/quality/heating.png) no-repeat center;
+}
+.quality::after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -9px;
+	left: 0;
+	right: 0;
+	height: 18px;
+	width: 100%;
+	background: transparent url(../images/border_img.png) repeat-x;
+}
+/**
+*
+* блок Типы домов
+*
+**/
+.house_types{
+	width: 100%;
+	background: #E9EAEB;
+	padding-bottom: 3em;
+}
+.house_types h2{
+	color: #4D4D4D;
+	text-align: center;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	padding-top: 70px;
+	font-size: 36px;
+}
+.house_types ul{
+	display: block;
+	width: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #4D4D4D;
+	margin-top: 2em;
+	text-align: center;
+	margin-bottom: 2em;
+}
+.house_types li{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 1.2em;
+	width: calc(100% / 3 - .88em);
+	text-align: center;
+	line-height: 1.5em;
+	background: #ffffff;
+	margin-right: 1em;
+	font-size: 14px;
+}
+.house_types li:nth-child(3n+3){
+	margin-right: 0;
+}
+.house_img{
+	height: 200px;
+	background: #fff;
+}
+.house_img img{
+	display: block;
+	width: 100%;
+}
+.house_info{
+	width: 100%;
+	padding: 1em;
+	height: 215px;
+	position: relative;
+}
+a.link_house{
+	display: block;
+	font-size: 24px;
+	color: #2B73A1;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	margin-bottom: .5em;
+}
+.more{
+	display: block;
+	height: 48px;
+	line-height: 45px;
+	border-radius: 3px;
+	background: #E9EDF0;
+	text-decoration: none;
+	color: #2B73A1;
+	font-size: 16px;
+	position: absolute;
+	bottom: 1em;
+	left:1em;
+	right: 1em;
+}
+/**
+*
+* блок Галерея
+*
+*/
+.gallery{
+	width: 100%;
+}
+.gallery_h2{
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	color: #4D4D4D;
+	margin-top: 70px;
+	font-size: 44px;
+}
+.gallery_h2 h2{
+	display: block;
+	margin: 0 .5em;
+	height: 50px;
+}
+.gallery_h2 h2::before, .gallery_h2 h2::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	border-top: 2px solid #CBCBCB;
+	border-top: 2px solid #CBCBCB;
+	margin-top: .6em;
+}
+.gallery_h2 h2::before{
+	margin-left: -102%;
+}
+.gallery_h2 h2::after{
+	margin-left: 2%;
+}
+.slider{
+	overflow: hidden;
+	position: relative;
+	height: 470px;
+	margin-top: 3em;
+}
+.gallery ul{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	white-space: nowrap;
+	letter-spacing : -.36em;
+	font-size : 0;
+
+}
+.gallery li{
+	display: inline-block;
+}
+.gallery li div{
+	width: 313px;
+	height: 235px;
+	overflow: hidden;
+}
+.gallery li img{
+	width: 100%;
+}
+.prev-page, .next-page{
+	position: absolute;
+	width: 105px;
+	height: 105px;
+	display: block;
+	background-color: yellow;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 50%;
+}
+.prev-page{
+	left: 2em;
+	background: rgba(255,255,255,.8) url(../images/prev.png) no-repeat 45% center;
+}
+.next-page{
+	right: 2em;
+	background: rgba(255,255,255,.8) url(../images/next.png) no-repeat center;
+}
+.slider_overlay{
+	position: relative;
+}
+/**
+*
+* блок с документами
+*
+**/
+.documents{
+	width: 100%;
+	background: #E9EAEB;
+}
+.documents h2{
+	color: #4D4D4D;
+	text-align: center;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	padding-top: 70px;
+	font-size: 36px;
+}
+.documents ul{
+	display: block;
+	width: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #4D4D4D;
+	margin-top: 2em;
+}
+.documents li{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 1.2em;
+	width: calc(100% / 4 - .2em);
+	text-align: center;
+	line-height: 1.3em;
+}
+.documents li div{
+	width: 100%;
+	height: 320px;
+}
+.documents li:first-child div{
+	background: url(../images/doc/doc1.png) no-repeat center;
+}
+.documents li:nth-child(2) div{
+	background: url(../images/doc/doc2.png) no-repeat center;
+}
+.documents li:nth-child(3) div{
+	background: url(../images/doc/doc3.png) no-repeat center;
+}
+.documents li:nth-child(4) div{
+	background: url(../images/doc/doc4.png) no-repeat center;
+}
+.documents li a{
+	display: block;
+	color: #2B73A1;
+	margin-top: 1em;
+}
+/**
+*
+* блок с формой
+*
+**/
+.form_block {
+	width: 100%;
+	padding: 3em 0;
+	border-bottom: 10px solid #3FA64C;
+}
+/**
+*
+* футер сайта
+*
+**/
+footer{
+	width: 100%;
+	background: #434343;
+	padding: 1em 0;
+	font-family: "Open Sans", sans-serif;
+}
+footer ul{
+	width: 100%;
+}
+footer li {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(100% / 4 - .25em);
+}
+.footer_logo div{
+	width: 170px;
+	height: 60px;
+	background: transparent url(../images/footer_logo.png) no-repeat center;
+	margin-bottom: 1em;
+}
+.footer_logo p{
+	color: #989898;
+	font-size: 12px;
+	line-height: 1.5em;
+	padding: 0 .5em;
+}
+.footer_links{
+	padding: 1.5em 0 0 0;
+}
+.footer_links a{
+	font-size: 14px;
+	color: #ffffff;
+	display: block;
+	width: 100%;
+	margin-bottom: 1em;
+}
+.footer_links a span{
+	display: inline-block;
+	width: 9px;
+	height: 4px;
+	margin-left: .2em;
+	background: transparent url(../images/arrow_white.png) no-repeat center;
+}
+.footer_numbers{
+	font-size: 14px;
+	line-height: 1.5em;
+	padding-top: 1.5em;
+}
+.footer_operator{
+	margin-left: 1em;
+	color: #989898;
+}
+.footer_numbers a{
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.footer_numbers a span{
+	color: #989898;
+	margin-right: .3em;
+}
+.footer_numbers a.callback{
+	background: #4F4F4F url(../images/callback.png) no-repeat 1em center;
+	padding: 1em 1em 1em 3em;
+	border-radius: 5px;
+	text-decoration: none;
+	display: block;
+	color: #989898;
+	width: 175px;
+	font-weight: normal;
+	margin: .5em 0 0 .5em;
+	line-height: 1em;
+}
+.developers{
+	padding-top: 1.5em;
+}
+.developers a{
+	float: right;
+	display: block;
+	color: #989898;
+	font-size: 12px;
+	padding: .2em;
+	text-decoration: none;
+	width: 160px;
+	height: 70px;
+	border: 1px dashed #666666;
+	background: transparent url(../images/salesup_logo.png) no-repeat center;
+}
+
+/**
+*
+* Страница информации о котедже
+*
+***/
+.cottage_info{
+	margin-top: 70px;
+	width: 100%;
+	background-image: url(../images/cottage_info_bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding:3em 0;
+	position: relative;
+}
+.info{
+	width: 100%;
+	background: #ffffff;
+	font-family: "Open Sans", sans-serif;
+}
+.info ul{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.info li{
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+}
+.info li:first-child{
+	width: calc(100% - 405px)
+}
+.info li:last-child{
+	width: 400px;
+	padding: 3em 1em 1em 1em;
+	text-align: center;
+}
+.cottage_info::after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -9px;
+	left: 0;
+	right: 0;
+	height: 18px;
+	width: 100%;
+	background: transparent url(../images/border_img.png) repeat-x;
+}
+.info h2{
+	color: #4D4D4D;
+	text-align: center;
+	font-family: Lora, sans-serif;
+	font-weight: bold;
+	font-size: 44px;
+}
+.cottage_price{
+	margin: 1em 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: #4D4D4D;
+}
+.cottage_price span{
+	color: #989898;
+	font-weight: normal;
+	margin-right: 1em;
+}
+.cottage_economy{
+	color: #3FA64C;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+.info_form{
+	width: 100%;
+	background: #53AF5E;
+	margin-top: 3em;
+	padding: 1em;
+	border-radius: 5px;
+}
+.info_form p{
+	font-family: Lora, sans-serif;
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+.info_form input{
+	display: block;
+	width: 100%;
+	height: 48px;
+	border: none;
+	border-radius: 3px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	background: #fff;
+	padding: 0 1.2em;
+	color: #4D4D4D;
+	margin-bottom: 1em;
+}
+.info_form a{
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: #4D4D4D;
+	text-align: center;
+	line-height: 45px;
+	background: #FFDF1C;
+	height: 48px;
+	border-radius: 3px;
+}
+.info_form a:hover{
+	background: #F2CE00;
+}
